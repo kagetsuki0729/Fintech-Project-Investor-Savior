@@ -1,0 +1,70 @@
+{% load static %} <!-- djanog用 -->
+<!DoCTYPE html>
+<html lang="en"> <!-- The <html> tag represents the root of an HTML document. -->
+  <head> <!-- The <head> element is a container for metadata -->
+    <!-- The <meta> tag provides metadata about the HTML document.-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Base layout for this site, every html extends this html.">
+    <meta name="author" content="Richard Frank">
+
+    <!-- Imports an icon to represent this document。(會顯示在瀏覽器分頁上的圖示) -->
+    <link rel="icon" href="{% static "images/favicon.png" %}"> <!-- 等同static/materials/favicon.png -->
+    <!-- Title of this document -->
+    <title>{% block title %}{% endblock %}</title> <!-- 此html作為樣板，其他html使用時可以代換掉這些block -->
+
+    <!-- Import css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.css" integrity="sha384-mYTwI/KzDDHTztOhAJV+Q1nlOm7p/CXuwUp1dYulIz48ttTtc6WD8JN0vxnk8bip" crossorigin="anonymous"> <!-- Bootstrap core CSS, we use BootstrapCDN to skip download of Bootstrap -->
+    <link rel="stylesheet" href="{% static "css/layout.css" %}">  <!-- Custom styles for this template -->
+    {% block other-css %}{% endblock %}
+  </head>
+  <body> <!-- The <body> tag defines the document's body. -->
+    <!-- What is class?
+	 class is kind of identifers assigned to elements,
+	 so CSS or JavaScript or ... can perform tasks for all elements with specified class name
+	 i.e. do things for all elements in the same class
+	 an elements can belong to one or many classes-->
+
+    <!-- banner (called Navbar ,in bootstrap)-->
+    <!-- The <nav> tag defines a set of navigation links -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"> <!-- bootstrap.min.css alreay define styles of these class-->
+      <!-- Title of Navbar -->
+      <a class="navbar-brand" href="/">IIS</a> <!-- The <a> tag defines a hyperlink -->
+
+      <!-- elements of Navbar -->
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault"> <!-- The <div> tag defines a division, so we can do things for all elements of this division. The id attribute must be unique within this HTML document -->
+	<!-- Links in  Navbar-->
+	<ul class="navbar-nav mr-auto"> <!-- unordered HTML list -->
+	  <!-- Link1 -->
+	  <li class="nav-item active">
+	    <a class="nav-link" href="/">Home</a>
+	  </li>
+      <li class="nav-item active">
+	    <a class="nav-link" href="/about">About</a>
+	  </li>
+	</ul> <!-- end of links in Navbar -->
+      </div> <!-- end of elements in Navbar-->
+    </nav> <!-- end of Navbar -->
+
+    <!-- The <main> tag specifies the main content of a document, and is unique to other documents -->
+    <main role="main" class="container">
+
+      {% block main %}
+      {% endblock %}
+
+    </main>
+
+    <!-- JavaScript -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.js" integrity="sha384-rFF2pHApbkyNyV2CA6xzXp3VNJY7cZeJRh3iy9fsgwwzQgr58GqQAPidGRiMV8eG" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script> <!-- use latest -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+   	    $('.welcome-message').hide();
+	    $('.welcome-message').fadeIn(1500);
+</script>
+    {% block other-js %}{% endblock %}
+  </body>
+</html>

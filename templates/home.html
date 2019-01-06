@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% load static %} <!-- or you won't be able to use static tag here -->
+
+{% block title %}IIS Home{% endblock %}
+
+{% block other-css %}
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+{% endblock %}
+
+{% block main %}
+<div class="welcome-message">
+  <h1>Individual Investor Savior</h1> <!-- level 1 heading -->
+  <p class="lead">Invest your fate.</p> <!-- paragraph of texts -->
+</div>
+
+
+
+{% endblock %}

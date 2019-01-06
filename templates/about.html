@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% load static %} <!-- or you won't be able to use static tag here -->
+
+{% block title %}About{% endblock %}
+
+{% block other-css %}
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+{% endblock %}
+
+{% block main %}
+    <div class="about-us">
+        <h2>NCCU Fintech Project</h2>
+        <h3>Members</h3>
+        <p class="lead">
+
+        </p> <!-- paragraph of texts -->
+    </div>
+<script type="text/javascript">
+window.onload = function() {
+    if (window.jQuery) {
+        // jQuery is loaded
+        $('.about-us').hide();
+	    $('.about-us').fadeIn(1500);
+    }
+}
+</script>
+
+
+{% endblock %}

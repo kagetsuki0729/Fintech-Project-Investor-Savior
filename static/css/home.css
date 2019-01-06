@@ -1,0 +1,16 @@
+/* CSS .class Selector 
+Select and style all html elements with class="....." */
+.welcome-message{
+    /*
+1つだけ設定した場合：上下左右すべてに指定した数値の余白ができます。
+2つ設定した場合：1つめの数値が上下に、2つめの数値が左右に適用されます。
+3つ設定した場合：1つめの数値が上に、2つめの数値が左右に、3つめの数値が下に適用されます。
+4つ設定した場合：1つめの数値が上になり、次に右、下、左と時計回りの順番で適用されます。
+   */
+    padding: 5rem 1.5rem;
+    text-align: center;
+}
+.about-us{
+    text-align: center;
+
+}

@@ -1,0 +1,39 @@
+/* style of <body> */
+body {
+    /* padding is reserved space inside border (余白) */
+    padding-top: 5rem; /*root em: multiplier to root element(<html>)'s font-size*/
+}
+
+/* In addtin to style for <th> defined by bootstrap*/
+th {
+    text-align: center;
+    width: 30%;
+}
+
+.mytable {
+    margin: auto;
+    border: 1px solid gray;
+    border-spacing: 1px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.mytable th {
+    border: 1px solid gray;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    background: #111111;
+    color:white;
+    white-space: nowrap;
+}
+.mytable td{
+    border: 1px solid gray;
+    border-spacing:1px;
+    border-collapse:collapse;
+    font-size:16px;
+    text-align: center;
+}
+td:hover{
+    background-color: #eeeeee;
+}
