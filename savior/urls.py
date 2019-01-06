@@ -6,4 +6,5 @@ app_name='savior'
 
 urlpatterns = [
     path('', views.index, name='home'),
+    path('diagram',views.diagram, name='diagram')
 ]

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% load static %} <!-- or you won't be able to use static tag here -->
+
+{% block title %}IIS Home{% endblock %}
+
+{% block other-css %}
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+{% endblock %}
+
+{% block main %}
+<div style="text-align: center">
+  <h1>Apple</h1> <!-- level 1 heading -->
+  <img src="{% static "images/pic001.png" %}">
+  <p class="lead"></p> <!-- paragraph of texts -->
+</div>
+
+
+
+{% endblock %}
