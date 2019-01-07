@@ -1,1 +1,2 @@
-Django==2.0.5
+django_graphos==0.3.41
+Django==2.1.5
