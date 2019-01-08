@@ -5,6 +5,8 @@
 
 {% block other-css %}
 <link rel="stylesheet" href="{% static "css/home.css" %}">
+<script src="{% static "/js/main.js" %}"></script>
+
 {% endblock %}
 
 
@@ -52,6 +54,22 @@
 </div>
 <!-- TradingView Widget END -->
 
+<form class="pt-2" style="width:50%;margin:auto;padding-bottom: 20px" action="#gtrend"> <!-- Form element are input elements, like text fields, checkboxes, .... -->
+	<div class="input-group"> <!--.input-group is a container adding an icon, text or a button to an input-->
+	  <!-- 輸入欄 -->
+	  <input type="text" class="form-control" placeholder="Enter keywords" id="query-text-field">
+	  <!-- 送出按鈕 -->
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-secondary" id="start-query" >Search</button>
+          </div>
+	</div>
+</form> <!-- end of query box -->
 
+<div style="width: 70%;height:500px;margin: auto;">
+<iframe style="width:100%;height:450px;margin: auto" id="gtrend" src="/savior/gtrend">
+<!--<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1671_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Apple","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=Apple&geo=US&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+-->
+</iframe>
+</div>
 
 {% endblock %}

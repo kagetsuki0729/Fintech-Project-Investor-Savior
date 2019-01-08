@@ -6,5 +6,6 @@ app_name='savior'
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('diagram',views.diagram, name='diagram')
+    path('diagram',views.diagram, name='diagram'),
+    path('gtrend',views.gtrend, name='gtrend')
 ]
